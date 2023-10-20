@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital@0;1&family=Lato:ital,wght@0,700;1,700&family=Playpen+Sans:wght@400;700&display=swap');
+
+:root {
+  --body-bgc: linear-gradient(
+    90deg,
+    rgba(34, 0, 102, 1),
+    rgba(68, 208, 204, 1)
+  );
+  --container-dimension: 45rem; 
+  --borders: .3rem solid #2b2b2b;
+  --bdrs: .5rem;
+  --container-bg: rgba(245, 245, 245, .75);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,4 +26,28 @@ html {
 
 body {
   height: 100%;
+  background: var(--body-bgc);
+  font-size: 1.8rem;
+  font-family: 'Playpen Sans', cursive;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
 }
+
+.main-heading {
+  font-size: 2em;
+}
+
+.container {
+  width: var(--container-dimension);
+  height: var(--container-dimension);
+  /* border: var(--borders); */
+  border-radius: var(--bdrs);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--container-bg)
+}
+
