@@ -7,15 +7,23 @@
   --body-bgc: rgba(7, 56, 233, 1);
   --body-font-color: rgba(19, 31, 32, .85);
   --container-bg: rgba(255, 255, 255, 1);
-  --input-bg: rgba(223, 235, 236, .75);
+  --input-bg: rgba(158, 203, 207, 0.75);
   --btn-bg: rgba(94, 156, 161, .85);
   /* Colors */
-
+  /* ------------------------------------------ */
+  /* Dimensions */
   --container-width: 45rem;
   --container-height: 55rem ;
   --borders: .3rem solid #2b2b2b;
   --bdrs: .5rem;
+  /* Dimensions */
+  /* ------------------------------------------ */
+  /* Effects */
   --box-shadow: 0 .4rem .8rem rgba(0, 0, 0, .3);
+  --text-shadow: 0 .4rem .8rem rgba(0, 0, 0, .3);
+  --btn-hover: rgba(19, 31, 32, .7);
+  --btn-scale: scale(1.1);
+  /* Effects */
 }
 
 * {
@@ -42,27 +50,45 @@ body {
   justify-content: center;
 }
 
+
 .main-heading {
   font-size: 2em;
 }
 
-.container {
-  width: var(--container-width);
-  height: var(--container-height);
-  /* border: var(--borders); */
-  border-radius: var(--bdrs);
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--container-bg);
+.main-heading, 
+.score,
+.calculation {
+  text-shadow: var(--text-shadow);
+}
+
+.form, 
+input, 
+.btn {
   box-shadow: var(--box-shadow);
 }
 
+.form {
+  width: var(--container-width);
+  height: var(--container-height);
+  border-radius: var(--bdrs);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--container-bg);
+  position: relative;
+  padding: 2rem;
+}
+
 input {
+  display: block;
   background-color: var(--input-bg);
   outline: none;
   border: none;
+  width: 40rem;
+  height: 5rem;
+  text-align: center;
+  border-radius: var(--bdrs);
 }
 
 .btn {
@@ -70,4 +96,44 @@ input {
   color: antiquewhite;
   outline: none;
   border: none;
+  width: 30rem;
+  height: 5rem;
+  border-radius: var(--bdrs);
+  margin: 0 auto;
+  text-transform: uppercase;
 }
+
+.main-heading {
+  width: 90%;
+  text-align: center;
+  height: auto;
+  padding: 1rem;
+}
+
+.score {
+  width: 90%;
+  text-align: center;
+  height: auto;
+  padding: 1rem;
+  margin: 1rem ;
+}
+
+.calculation {
+  width: auto;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+/* Effets */
+
+.btn:hover{
+ background-color: var(--btn-hover); 
+ transform: var(--btn-scale);
+ cursor: pointer;
+}
+
+input:focus {
+  border: .2rem solid rgba(64, 64, 64, .5);
+}
+
+/* Effects */
