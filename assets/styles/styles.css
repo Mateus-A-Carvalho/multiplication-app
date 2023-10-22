@@ -23,6 +23,7 @@
   --text-shadow: 0 .4rem .8rem rgba(0, 0, 0, .3);
   --btn-hover: rgba(19, 31, 32, .7);
   --btn-scale: scale(1.1);
+  --animation-time: .25s ease-in-out;
   /* Effects */
 }
 
@@ -125,15 +126,14 @@ input {
 }
 
 /* Effets */
-
 .btn:hover{
  background-color: var(--btn-hover); 
  transform: var(--btn-scale);
  cursor: pointer;
+ transition: var(--animation-time);
 }
 
 input:focus {
   border: .2rem solid rgba(64, 64, 64, .5);
 }
-
 /* Effects */
