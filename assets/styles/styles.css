@@ -117,6 +117,7 @@ input {
   height: auto;
   padding: 1rem;
   margin: 1rem ;
+  color: rgba(0, 180, 0, .85);
 }
 
 .calculation {
@@ -137,3 +138,7 @@ input:focus {
   border: .2rem solid rgba(64, 64, 64, .5);
 }
 /* Effects */
+
+.bad {
+  color: rgba(180, 0, 0, .85);
+}
